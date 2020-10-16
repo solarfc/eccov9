@@ -1,0 +1,109 @@
+/*
+    header style
+ */
+
+.header {
+  background: url("../img/header/header-bg.png") no-repeat center/cover, $gradient;
+  padding: 50px 0 61px;
+  position: relative;
+
+  &__content {
+    position: relative;
+
+    img.logo {
+      margin-left: 41.5%;
+    }
+
+    p.title {
+      margin: 20px 0 87.3px 41.5%;
+    }
+
+    &-img {
+      position: relative;
+      position: absolute;
+      top: -95px;
+      left: 0;
+
+      img {
+        position: relative;
+        z-index: 9;
+      }
+
+      h1 {
+        bottom: -65px;
+        right: 124px;
+      }
+
+      .ellipse {
+        width: 250px;
+        height: 250px;
+        bottom: -34px;
+        right: calc(100% - 39px);
+      }
+    }
+
+    .to-order {
+      margin-left: 34.25%;
+    }
+
+    .price {
+      margin: 57px 0 241px 41.5%;
+
+      span {
+
+        &.old-price {
+
+        }
+
+        &.new-price {
+          display: block;
+        }
+      }
+    }
+
+    ul {
+      display: flex;
+      box-sizing: border-box;
+      padding: 0 91px;
+
+      li {
+        box-sizing: border-box;
+        padding-left: 40px;
+        position: relative;
+
+        p {
+          width: 218px;
+        }
+
+        &:before {
+          content: "";
+          display: block;
+          width: 20px;
+          height: 20px;
+          background: $button;
+          border-radius: 50%;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+        }
+
+        &:nth-child(2) {
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+
+  &:after {
+    /* скрыть на */
+    content: "";
+    display: block;
+    width: 480px;
+    height: 100%;
+    background: url("../img/header/man.png") no-repeat center/cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}

@@ -1,0 +1,60 @@
+/*
+    spray start
+ */
+
+.spray {
+  position: relative;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+
+    &-img {
+      width: 344px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &-text {
+      margin-top: 116px;
+      width: calc(100% - 378px);
+
+      h3 {
+
+      }
+
+      p {
+        color: $pastel-blue;
+        max-width: 669px;
+        margin: 10px 0 20px;
+      }
+
+      h4 {
+        text-transform: uppercase;
+        max-width: 520px;
+
+        span {
+          font-size: 36px;
+          color: $yellow;
+        }
+      }
+
+      form {
+        margin-top: 21px;
+      }
+    }
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    width: 268px;
+    height: 298px;
+    background: url("../img/spray/1.png") no-repeat center/cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}

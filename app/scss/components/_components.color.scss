@@ -1,0 +1,23 @@
+/*
+    color
+ */
+
+$white: #fff;
+$blue: #346bfa;
+$cyan: #00f0ff;
+$pastel-blue: #a2bcff;
+$dark-blue: #0e2258;
+$grey: #555;
+$yellow: #faff00;
+$gradient: linear-gradient(90deg, #203dd7 0%, #052441 100%);
+$button: linear-gradient(180deg, #faff00 0%, #ff8a00 100%);
+$button-hover: linear-gradient(180deg, #ff8a00 0%, #faff00 100%);
+
+/*
+    shadow
+ */
+
+$shadow-first: 0 0 20px 2px rgba(15, 38, 116, 0.5);
+$shadow-second: 0 0 5px rgba(15, 38, 116, 0.3);
+$shadow-third: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+$shadow-fourth: inset 0 -4px 4px rgba(0, 0, 0, 0.25);
