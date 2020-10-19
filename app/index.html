@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="css/jquery.fancybox.min.css">
         <link rel="stylesheet" href="css/jquery.formstyler.theme.css">
         <link rel="stylesheet" href="css/jquery.formstyler.css">
+        <link rel="stylesheet" href="css/slick.css">
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/style.css">
     </head>
@@ -21,11 +22,11 @@
                     <div class="header__content-img">
                         <img src="img/header/shoe.png" alt="">
                         <h1>-60%</h1>
-                        <div class="ellipse"></div>
+                        <div class="ellipse small"></div>
                     </div>
                     <div class="to-order">
                         <a href="">заказать</a>
-                        <h6>акция продлится до <output></output></h6>
+                        <h6>Акция длится до <output></output></h6>
                     </div>
                     <div class="price">
                         <span class="old-price">4380грн</span>
@@ -174,7 +175,7 @@
                                 <p><strong>Цвет:</strong> чёрный</p>
                             </li>
                             <li>
-                                <p><strong>Сезон:</strong> Зима 2020</p>
+                                <p><strong>Сезон:</strong> Зима <output></output></p>
                             </li>
                             <li>
                                 <p><strong>Страна:</strong> Словакия</p>
@@ -263,7 +264,7 @@
                                 <p><strong>Цвет:</strong> темно-синий</p>
                             </li>
                             <li>
-                                <p><strong>Сезон:</strong> Зима 2020</p>
+                                <p><strong>Сезон:</strong> Зима <output></output></p>
                             </li>
                             <li>
                                 <p><strong>Страна:</strong> Словакия</p>
@@ -467,15 +468,123 @@
                 </div>
             </div>
             <!-- photo end -->
-            <!--  --><!--  -->
-            <!--  --><!--  -->
+            <!-- description start -->
+            <div class="description">
+                <div class="container">
+                    <div class="description__content">
+                        <div class="description__content-text">
+                            <h3>технология receptor</h3>
+                            <p>Уникальная технология, используемая компанией ЕССО в производстве обуви для активного образа жизни. Движение – очень сложный процесс, каждый шаг человека можно разделить на три этапа и на каждом этапе стопа испытывает различные нагрузки и нуждается в особой поддержке.</p>
+                            <img src="img/description/1.jpg" alt="">
+                            <p><span>Первый этап</span> – «удар пятки» — когда нога человека касается поверхности, данное касание приходится на пяточную область стопы. В данной части подошвы находится скос подошвы в 20°, который обеспечивает устойчивость, и пяточный амортизатор, который принимает на себя основной удар о поверхность и снимает нагрузку с суставов и позвоночника.</p>
+                            <p><span>Второй этап</span> – «горизонтальное положение» — вся стопа находится в полном соприкосновении с поверхностью. В средней части подошвы находится стабилизатор плюсны, который принимает на себя нагрузку, перераспределяя массу дела и защищая стопу от вывиха.</p>
+                            <p><span>Третий этап</span> – «отталкивание» — стопа сгибается и отталкивается от поверхности. В данной части подошвы находится Flex-зона (отмечена на подошве «крестом»), которая обеспечивает легкий сгиб стопы. Также в данной части подошвы размещена трехпалая система, которая обеспечивает легкое отталкивание.</p>
+                        </div>
+                        <div class="description__content-img">
+                            <img src="img/description/shoe.png" alt="">
+                        </div>
+                        <div class="description__content-block">
+                            <img src="img/description/man.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- description end -->
+            <!-- information start -->
+            <div class="information">
+                <div class="container">
+                    <div class="review">
+                        <h3>что говорят покупатели</h3>
+                        <div class="review__content">
+                            <div class="review__content-slider">
+                                <div class="review__content-slider__item">
+                                    <figure>
+                                        <p>Крутейшие ботинки экко, честно говоря не думал, что за такие деньги будет  отменное качество. Кожаные, теплые. Пока их изнашивать не буду- подождем зимы. Благодарю!</p>
+                                        <p class="big">Дмитрий</p>
+                                    </figure>
+                                    <figure>
+                                        <p>У меня уже 4-ые ботинки ecco за все время + несколько пар демисезонных кроссовок. В удобство/цена лучшие вот и все. Плюс, вот купил здесь на зиму, но можно и осенью носить, «короли Дании» мастера в производстве обуви под длительный период. Ботинки доставлены в срок, качество бомба.</p>
+                                        <p class="big">Виктор</p>
+                                    </figure>
+                                </div>
+                                <div class="review__content-slider__item">
+                                    <figure>
+                                        <p>Заказал 2 пары: зимние ботинки и женскую модель жене. Ботинки сидят на ноге солидно, под джинсы прекрасный вид. Очень быстро доставили, на почте сразу их примерял – подошли по размеру. Жена от подарка в восторге. Крутейшая покупка!!! Цена радует)</p>
+                                        <p class="big">Сергей</p>
+                                    </figure>
+                                    <figure>
+                                        <p>Только что пришел с новой почты - очень доволен покупкой. Ботинки точно такие же, как на фото - качество пошива и материалов более чем достойное. </p>
+                                        <p class="big">Максим</p>
+                                    </figure>
+                                </div>
+                                <div class="review__content-slider__item">
+                                    <figure>
+                                        <p>Вчера пришла доставка, хорошо упакованные ботинки – выглядят полностью как на фото. Шнуровка удобная, подошва выполнена на первый взгляд нормально. Рад покупке – вменяемые деньги за эту обувь.</p>
+                                        <p class="big">Олег</p>
+                                    </figure>
+                                    <figure>
+                                        <p>Хорошая модель urban black energy. Качественная, доступная по цене обувь. Осенью пока не буду носить, она все-таки зимняя. Но покупаю заранее каждый год, когда бренды выставляют ботинки не по двойной цене.</p>
+                                        <p class="big">Александр</p>
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="review__content-nav">
+                                <div class="prev-arrow"></div>
+                                <div class="next-arrow"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="delivery">
+                        <div class="delivery__content">
+                            <figure>
+                                <p>Вы оставляете заявку на нашем сайте</p>
+                            </figure>
+                            <figure>
+                                <p>Оператор перезванивает для оформления</p>
+                            </figure>
+                            <figure>
+                                <p>Мы отправляем Ваш заказ по почте</p>
+                            </figure>
+                            <figure>
+                                <p>Вы оплачиваете заказ на почте после осмотра</p>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="ellipse"></div>
+                </div>
+            </div>
+            <!-- information end -->
         </main>
         <!-- main end -->
-        <!--  --><!--  -->
+        <!-- footer start -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__content">
+                    <img src="img/big-logo.png" alt="" class="logo">
+                    <p class="title">ECCO - бесспорный лидер по выпуску мужской обуви на каждый день. </p>
+                    <div class="price">
+                        <span class="old-price">4380грн</span>
+                        <span class="new-price">1199грн</span>
+                    </div>
+                    <div class="footer__content-img">
+                        <img src="img/footer/shoe.png" alt="">
+                        <h2>-60%</h2>
+                        <div class="ellipse"></div>
+                    </div>
+                    <div class="to-order">
+                        <a href="">заказать</a>
+                        <h6>Акция длится до <output></output></h6>
+                    </div>
+                    <h6 class="address">Разработано <a href="http://itcreative.info/" target="_blank">ITcreative</a> <output></output></h6>
+                </div>
+            </div>
+        </footer>
+        <!-- footer end -->
         <script src="js/jq.js"></script>
         <script src="js/video.js"></script>
         <script src="js/jquery.fancybox.min.js"></script>
         <script src="js/jquery.formstyler.min.js"></script>
+        <script src="js/slick.js"></script>
         <script src="js/main.js"></script>
     </body>
 </html>

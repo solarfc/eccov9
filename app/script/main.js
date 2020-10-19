@@ -5,6 +5,35 @@ console.log(`width ${myWidth} \n height ${myHeight}`);
 window.onload = function () {
 
     /*
+        increase date
+     */
+
+    let today = new Date(),
+        tomorrow = new Date(),
+        day,
+        month,
+        year,
+        i = 3,
+        period = document.querySelectorAll('.to-order h6 output');
+
+    tomorrow.setDate(today.getDate() + i);
+
+    day = (tomorrow.getDate() > 9) ? tomorrow.getDate() : `0${tomorrow.getDate()}`;
+    month = (tomorrow.getMonth() + 1 > 9) ? tomorrow.getMonth() + 1 : `0${tomorrow.getMonth() + 1}`;
+    year = tomorrow.getFullYear();
+
+    for(let i = 0; i < period.length; i++) {
+        period[i].innerHTML = `${day}.${month}.${year.toString().slice(2)}`;
+    }
+
+    let catalogYear = document.querySelectorAll('p output');
+    for(let i = 0; i < catalogYear.length; i++) {
+        catalogYear[i].innerHTML = year;
+    }
+
+    document.querySelector('h6.address output').innerHTML = year;
+
+    /*
         fancybox loop
      */
 
@@ -18,6 +47,20 @@ window.onload = function () {
         $('select').styler({
             selectSmartPositioning: false
         });
+    });
+
+    /*
+        review slider
+     */
+
+    $('.review__content-slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        rows: 0,
+        speed: 300,
+        arrows: true,
+        prevArrow: $('.prev-arrow'),
+        nextArrow: $('.next-arrow')
     });
 
     // /*

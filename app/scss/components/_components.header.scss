@@ -7,15 +7,45 @@
   padding: 50px 0 61px;
   position: relative;
 
+  @include mq(md) {
+    padding: 23px 0 48px;
+  }
+
   &__content {
     position: relative;
 
+    @include mq(md) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
     img.logo {
       margin-left: 41.5%;
+
+      @include mq(md) {
+        margin: 0 auto;
+        order: 1;
+      }
     }
 
     p.title {
       margin: 20px 0 87.3px 41.5%;
+
+      @include mq(lg) {
+        position: relative;
+        z-index: 11;
+      }
+
+      @include mq(md) {
+        margin: 10px auto -68px;
+        text-align: center;
+        order: 2;
+      }
+
+      @include mq(s) {
+        margin-bottom: -8%;
+      }
     }
 
     &-img {
@@ -24,14 +54,43 @@
       top: -95px;
       left: 0;
 
+      @include mq(lg) {
+        top: 0;
+        left: -30px;
+      }
+
+      @include mq(md) {
+        position: relative;
+        top: 0;
+        left: 0;
+        order: 3;
+      }
+
+      @include mq(s) {
+        max-width: 644px;
+      }
+
       img {
         position: relative;
         z-index: 9;
+
+        @include mq(s) {
+          width: 100%;
+        }
       }
 
       h1 {
         bottom: -65px;
         right: 124px;
+
+        @include mq(md) {
+          bottom: -25px;
+          right: 75px;
+        }
+
+        @include mq(s) {
+          right: 0;
+        }
       }
 
       .ellipse {
@@ -39,15 +98,52 @@
         height: 250px;
         bottom: -34px;
         right: calc(100% - 39px);
+
+        @include mq(md) {
+          width: 67px;
+          height: 67px;
+          top: 48px;
+          right: 15px;
+        }
       }
     }
 
     .to-order {
       margin-left: 34.25%;
+
+      @include mq(lg) {
+        margin-left: calc(41.5% + 120px);
+      }
+
+      @include mq(md) {
+        order: 5;
+        margin: 0 auto 56px;
+        width: 320px;
+      }
+
+      h6 {
+        bottom: 210px;
+        left: 103px;
+
+        @include mq(lg) {
+          text-align: center;
+          position: static;
+          margin-top: 10px;
+        }
+      }
     }
 
     .price {
       margin: 57px 0 241px 41.5%;
+
+      @include mq(lg) {
+        margin: 57px 0 241px calc(41.5% + 156px);
+      }
+
+      @include mq(md) {
+        order: 4;
+        margin: -75px 0 21px;
+      }
 
       span {
 
@@ -66,13 +162,29 @@
       box-sizing: border-box;
       padding: 0 91px;
 
+      @include mq(md) {
+        order: 6;
+        padding: 0;
+      }
+
+      @include mq(md) {
+        display: block;
+        max-width: 440px;
+        margin: 0 auto;
+      }
+
       li {
         box-sizing: border-box;
         padding-left: 40px;
         position: relative;
 
         p {
+          color: $white;
           width: 218px;
+
+          @include mq(md) {
+            width: auto;
+          }
         }
 
         &:before {
@@ -90,13 +202,17 @@
 
         &:nth-child(2) {
           margin: 0 auto;
+
+          @include mq(md) {
+            margin: 33px auto;
+          }
         }
       }
     }
   }
 
   &:after {
-    /* скрыть на */
+    /* скрыть на xl */
     content: "";
     display: block;
     width: 480px;
@@ -105,5 +221,13 @@
     position: absolute;
     top: 0;
     right: 0;
+
+    @include mq(xxl) {
+      right: -280px;
+    }
+
+    @include mq(xl) {
+      display: none;
+    }
   }
 }

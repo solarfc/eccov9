@@ -9,8 +9,20 @@
     display: flex;
     justify-content: space-between;
 
+    @include mq(lg) {
+      align-items: center;
+    }
+
+    @include mq(md) {
+      display: block;
+    }
+
     &-img {
       width: 344px;
+
+      @include mq(md) {
+        margin: 0 auto 23px;
+      }
 
       img {
         width: 100%;
@@ -21,19 +33,34 @@
       margin-top: 116px;
       width: calc(100% - 378px);
 
+      @include mq(lg) {
+        margin-top: 0;
+      }
+
+      @include mq(md) {
+        width: 100%;
+      }
+
       h3 {
 
       }
 
       p {
-        color: $pastel-blue;
         max-width: 669px;
         margin: 10px 0 20px;
+
+        @include mq(md) {
+          max-width: 100%;
+        }
       }
 
       h4 {
         text-transform: uppercase;
         max-width: 520px;
+
+        @include mq(md) {
+          max-width: 100%;
+        }
 
         span {
           font-size: 36px;
@@ -43,18 +70,39 @@
 
       form {
         margin-top: 21px;
+
+        @include mq(lg) {
+          max-width: 540px;
+        }
+
+        @include mq(md) {
+          margin: 32px auto 0;
+        }
+
+        .form-group {
+
+        }
       }
     }
   }
 
   &:after {
+    /* скрыть на xl */
     content: "";
     display: block;
     width: 268px;
     height: 298px;
-    background: url("../img/spray/1.png") no-repeat center/cover;
+    background: url("../img/1.png") no-repeat center/cover;
     position: absolute;
     top: 0;
     right: 0;
+
+    @include mq(xxl) {
+      right: -25px;
+    }
+
+    @include mq(xl) {
+      display: none;
+    }
   }
 }

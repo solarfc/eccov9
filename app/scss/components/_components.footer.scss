@@ -1,0 +1,139 @@
+/*
+    footer style
+ */
+
+.footer {
+  background: url("../img/footer/bg.png") no-repeat center/cover, $gradient;
+  padding-bottom: 33px;
+
+  @include mq(lg) {
+    background-position: bottom center;
+    background-size: auto;
+  }
+
+  &__content {
+    position: relative;
+
+    img.logo {
+      width: 930px;
+      position: absolute;
+      top: -181px;
+      left: -339px;
+      margin: 0;
+      z-index: 15;
+
+      @include mq(xxl) {
+        left: 0;
+      }
+
+      @include mq(xl) {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      @include mq(lg) {
+        position: relative;
+        top: 0;
+        margin-bottom: 30px;
+      }
+
+      @include mq(md) {
+        width: 100%;
+      }
+    }
+
+    p.title {
+      max-width: 542px;
+      margin-left: auto;
+
+      @include mq(lg) {
+        margin: 0 auto;
+        text-align: center;
+      }
+    }
+
+    .price {
+      margin: 53px 0 64px 653px;
+
+      @include mq(lg) {
+        margin: 17px auto 63px;
+        text-align: center;
+      }
+
+      span {
+
+        &.new-price {
+          display: block;
+
+          @include mq(lg) {
+            display: inline-block;
+          }
+        }
+      }
+    }
+
+    &-img {
+      position: relative;
+      position: absolute;
+      top: 87px;
+      left: -34px;
+
+      @include mq(lg) {
+        position: relative;
+        top: 0;
+        left: 0;
+      }
+
+      img {
+        position: relative;
+        z-index: 9;
+      }
+
+      h2 {
+        top: 0;
+        right: 44px;
+      }
+
+      .ellipse {
+        width: 450px;
+        height: 450px;
+        top: -47px;
+        left: -105px;
+      }
+    }
+
+    .to-order {
+      margin-left: 767px;
+
+      @include mq(lg) {
+        margin: 33px auto 53px;
+      }
+
+      h6 {
+        top: 226px;
+        right: 74px;
+
+        @include mq(xl) {
+          text-align: center;
+          position: static;
+          margin-top: 10px;
+        }
+      }
+    }
+
+    h6.address {
+      color: $pastel-blue;
+      margin: 79px 0 0 806px;
+
+      @include mq(lg) {
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      a {
+        display: inline-block;
+        color: inherit;
+      }
+    }
+  }
+}

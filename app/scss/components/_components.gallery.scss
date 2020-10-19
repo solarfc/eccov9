@@ -4,4 +4,8 @@
 
 .gallery {
   padding-bottom: 64px;
+
+  @include mq(md) {
+    padding: 32px 0 16px;
+  }
 }

@@ -14,7 +14,7 @@ html {
 body {
   font-family: $hr, sans-serif;
   font-size: 18px;
-  line-height: 1.1;
+  line-height: 20px;
   color: $white;
   background: $dark-blue;
 }
@@ -83,6 +83,10 @@ h1, h2 {
 h3 {
   font-size: 36px;
   text-transform: uppercase;
+
+  @include mq(s) {
+    font-size: 31px;
+  }
 }
 
 h4 {
@@ -98,6 +102,7 @@ h6 {
 }
 
 p {
+  color: $pastel-blue;
 
   &.big {
     font-size: 20px;
@@ -107,6 +112,12 @@ p {
   &.title {
     font-size: 34px;
     line-height: 34px;
+    color: $white;
+
+    @include mq(s) {
+      font-size: 27px;
+      line-height: 27px;
+    }
   }
 }
 
@@ -202,12 +213,17 @@ span {
   }
 
   h6 {
-    display: none;
+    position: absolute;
   }
 }
 
 form {
   display: flex;
+
+  @include mq(lg) {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 
   .form-group {
     width: 260px;
@@ -240,10 +256,18 @@ form {
 
     &.tel {
       margin: 0 20px;
+
+      @include mq(lg) {
+        margin: 0;
+      }
     }
 
     &.order {
       margin-left: auto;
+
+      @include mq(lg) {
+        margin: 20px auto 0;
+      }
 
       button {
         padding: 20px 0 11px;
@@ -259,6 +283,11 @@ form {
     position: relative;
     width: calc(100% + 60px);
     left: -28px;
+
+    @include mq(xl) {
+      width: 100%;
+      left: 0;
+    }
 
     a {
       box-shadow: $shadow-first;
@@ -277,6 +306,11 @@ form {
         a {
           width: 23%;
           min-width: 300px;
+
+          @include mq(xl) {
+            width: 24%;
+            min-width: auto;
+          }
         }
       }
 
@@ -286,6 +320,10 @@ form {
         a {
           width: 49%;
           min-width: 620px;
+
+          @include mq(xl) {
+            min-width: auto;
+          }
         }
       }
     }

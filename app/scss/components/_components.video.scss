@@ -7,15 +7,37 @@
   padding: 92px 0 98px;
   position: relative;
 
+  @include mq(md) {
+    padding-bottom: 39px;
+  }
+
+  @include mq(s) {
+    padding-top: 158px;
+  }
+
   &__content {
     display: flex;
     justify-content: space-between;
     position: relative;
 
+    @include mq(lg) {
+      display: block;
+    }
+
     &-block {
       width: 600px;
       margin-top: 269px;
       position: relative;
+
+      @include mq(lg) {
+        margin: 269px auto 38px;
+      }
+
+      @include mq(s) {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto 38px;
+      }
 
       figure.clip {
         position: relative;
@@ -75,6 +97,14 @@
         position: absolute;
         top: -384px;
         left: -158px;
+
+        @include mq(s) {
+          width: 385px;
+          height: 272px;
+          top: -189px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
       }
     }
 
@@ -82,6 +112,14 @@
       width: 50%;
       box-sizing: border-box;
       padding: 0 21px 0 66px;
+
+      @include mq(lg) {
+        width: 100%;
+      }
+
+      @include mq(md) {
+        padding: 0;
+      }
 
       h3 {
 
@@ -92,11 +130,15 @@
       }
 
       p {
-        color: $pastel-blue;
+
       }
 
       ul {
         margin-left: 48px;
+
+        @include mq(s) {
+          margin-left: 0;
+        }
 
         li {
           box-sizing: border-box;
@@ -128,6 +170,7 @@
     }
 
     &:after {
+      /* скрыть на lg */
       content: "";
       display: block;
       width: 735px;
@@ -136,6 +179,22 @@
       position: absolute;
       bottom: -64px;
       right: -233px;
+
+      @include mq(xxl) {
+        width: 635px;
+        height: 182px;
+        right: -75px;
+      }
+
+      @include mq(xl) {
+        width: 535px;
+        height: 154px;
+        right: 0;
+      }
+
+      @include mq(lg) {
+        display: none;
+      }
     }
   }
 
@@ -148,5 +207,10 @@
     position: absolute;
     top: 0;
     left: 0;
+
+    @include mq(s) {
+      width: 103px;
+      height: 164px;
+    }
   }
 }

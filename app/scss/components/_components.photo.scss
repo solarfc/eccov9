@@ -1,0 +1,32 @@
+/*
+    photo style
+ */
+
+.photo {
+  position: relative;
+
+  @include mq(md) {
+    padding: 25px 0 47px;
+  }
+
+  &__content {
+
+  }
+
+  &:before {
+    /* скрыть на xl */
+    content: "";
+    display: block;
+    width: 268px;
+    height: 298px;
+    background: url("../img/1.png") no-repeat center/cover;
+    position: absolute;
+    bottom: 335px;
+    left: 0;
+    transform: scale(-1, 1);
+
+    @include mq(xl) {
+      display: none;
+    }
+  }
+}
