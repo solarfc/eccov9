@@ -22,6 +22,16 @@
   &__block {
     position: relative;
 
+    @include mq(md) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @include mq(xs) {
+      display: block;
+    }
+
     h4 {
       background: $button;
       -webkit-background-clip: text;
@@ -37,6 +47,10 @@
     ul {
       margin: 20px auto;
 
+      @include mq(xs) {
+        margin: 8px auto 29px;
+      }
+
       li {
 
         p {
@@ -48,6 +62,10 @@
 
             @include mq(lg) {
               width: 190px;
+            }
+
+            @include mq(xs) {
+              width: auto;
             }
           }
         }
@@ -85,6 +103,7 @@
 
       @include mq(md) {
         position: relative;
+        width: 100%;
       }
 
       figure {
@@ -95,7 +114,6 @@
       }
 
       >figure {
-        position: absolute;
 
         @include mq(lg) {
           display: none;
@@ -105,9 +123,77 @@
           display: block;
         }
 
+        @include mq(s) {
+          position: relative;
+          max-width: 411px;
+          margin: 0 auto;
+        }
+
+        @include mq(xs) {
+
+        }
+
+        //position: absolute;
+        //
+        //@include mq(lg) {
+        //  display: none;
+        //}
+        //
+        //@include mq(md) {
+        //  display: block;
+        //}
+        //
+        //@include mq(s) {
+        //  position: relative;
+        //}
+        //
+        //@include mq(xs) {
+        //  width: 100%;
+        //}
+        //
+        //img {
+        //
+        //  @include mq(xs) {
+        //    width: 116%;
+        //    min-width: 338px;
+        //    position: relative;
+        //    left: -16%;
+        //  }
+        //}
+
+        img {
+          margin: 0;
+          position: absolute;
+
+          @include mq(s) {
+            position: static;
+            margin: 0 auto;
+          }
+
+          @include mq(xs) {
+            width: 100%;
+          }
+        }
+
         .ellipse {
           width: 350px;
           height: 350px;
+          left: -268px;
+
+          @include mq(md) {
+            left: 0;
+          }
+
+          @include mq(s) {
+            top: -33px !important;
+            left: 55px !important;
+          }
+
+          @include mq(xs) {
+            width: 254px;
+            height: 253px;
+            left: 30px !important;
+          }
         }
       }
 
@@ -121,9 +207,23 @@
           margin-left: auto;
         }
 
+        @include mq(s) {
+          margin: 0 auto 0;
+        }
+
+        @include mq(xs) {
+          width: 100%;
+          max-width: 442px;
+          margin-top: 11px;
+        }
+
         figure {
           width: 49%;
           max-width: 216px;
+
+          @include mq(s) {
+            position: relative;
+          }
 
           a {
 
@@ -142,12 +242,21 @@
 
               &:nth-child(2) {
                 margin: 10px auto;
+
+                @include mq(xs) {
+                  margin: 6px auto;
+                }
               }
             }
 
             .ellipse {
               width: 200px;
               height: 200px;
+
+              @include mq(s) {
+                width: 150px;
+                height: 150px;
+              }
             }
           }
 
@@ -157,125 +266,26 @@
 
               &:nth-child(1) {
                 margin-bottom: 10px;
+
+                @include mq(xs) {
+                  margin-bottom: 6px;
+                }
               }
             }
 
             .ellipse {
               width: 150px;
               height: 150px;
+
+              @include mq(s) {
+                width: 200px;
+                height: 200px;
+              }
             }
           }
         }
       }
     }
-
-    //&-img {
-    //  display: flex;
-    //  position: relative;
-    //  position: absolute;
-    //  right: -36px;
-    //
-    //  @include mq(xl) {
-    //    right: 0;
-    //  }
-    //
-    //  @include mq(md) {
-    //    position: relative;
-    //  }
-    //
-    //  @include mq(s) {
-    //    display: block;
-    //  }
-    //
-    //  figure {
-    //
-    //    .ellipse {
-    //      z-index: -1;
-    //    }
-    //  }
-    //
-    //  >figure {
-    //    position: absolute;
-    //
-    //    @include mq(lg) {
-    //      display: none;
-    //    }
-    //
-    //    @include mq(md) {
-    //      display: block;
-    //    }
-    //
-    //    @include mq(s) {
-    //      position: relative;
-    //      top: 0 !important;
-    //      left: 0 !important;
-    //    }
-    //
-    //    img {
-    //
-    //    }
-    //
-    //    .ellipse {
-    //      width: 350px;
-    //      height: 350px;
-    //    }
-    //  }
-    //
-    //  &__photo {
-    //    width: 442px;
-    //    display: flex;
-    //    justify-content: space-between;
-    //    align-items: center;
-    //
-    //    @include mq(md) {
-    //      margin-left: auto;
-    //    }
-    //
-    //    @include mq(s) {
-    //      margin: 0 auto !important;
-    //    }
-    //
-    //    figure {
-    //      width: 50%;
-    //      max-width: 216px;
-    //
-    //      a {
-    //        border-radius: 5px;
-    //
-    //        img {
-    //
-    //        }
-    //
-    //        &:nth-child(2) {
-    //          margin: 10px 0;
-    //        }
-    //      }
-    //
-    //      &:nth-child(1) {
-    //
-    //        .ellipse {
-    //          width: 150px;
-    //          height: 150px;
-    //        }
-    //      }
-    //
-    //      &:nth-child(2) {
-    //
-    //        a {
-    //
-    //          &:nth-child(2) {
-    //            margin-bottom: 0;
-    //          }
-    //        }
-    //
-    //        .ellipse {
-    //          width: 200px;
-    //          height: 200px;
-    //        }
-    //      }
-    //    }
-    //  }
-    //}
 
     form {
       margin: 50px auto 26px;
@@ -293,6 +303,14 @@
       @include mq(s) {
         max-width: 540px;
         align-items: flex-end;
+        margin-top: 64px;
+      }
+
+      @include mq(xs) {
+        display: block;
+        width: 89%;
+        min-width: 260px;
+        max-width: 350px;
       }
 
       .form-group {
@@ -305,6 +323,17 @@
           width: 260px;
         }
 
+        @include mq(xs) {
+          width: 100%;
+        }
+
+        &.tel {
+
+          @include mq(xs) {
+            margin: 10px auto;
+          }
+        }
+
         &.order {
 
           @include mq(md) {
@@ -313,6 +342,15 @@
 
           @include mq(s) {
             margin:20px 0 0 auto;
+          }
+
+          @include mq(xs) {
+            width: 100%;
+            margin: 10px auto 0;
+          }
+
+          button {
+            z-index: 9;
           }
         }
       }
@@ -326,6 +364,10 @@
 
         @include mq(s) {
           width: 260px;
+        }
+
+        @include mq(xs) {
+          width: 100%;
         }
 
         .jq-selectbox {
@@ -422,16 +464,66 @@
         }
 
         >figure {
-          top: 65px;
-          left: -372px;
+
+          img {
+            transform: rotate(-23.1deg);
+            top: 137px;
+            left: -344px;
+
+            @include mq(md) {
+              left: -35px;
+            }
+
+            @include mq(xs) {
+              transform: rotate(-23deg);
+            }
+          }
 
           .ellipse {
-            top: 24px;
-            left: 104px;
+            top: 89px;
           }
         }
 
+        //>figure {
+        //  top: 65px;
+        //  left: -372px;
+        //
+        //  @include mq(md) {
+        //    left: -63px;
+        //  }
+        //
+        //  @include mq(s) {
+        //    max-width: 466px;
+        //    top: 0;
+        //    left: 50%;
+        //    transform: translateX(-50%);
+        //  }
+        //
+        //  .ellipse {
+        //    top: 24px;
+        //    left: 104px;
+        //
+        //    @include mq(s) {
+        //      top: 18px;
+        //      left: 75px;
+        //    }
+        //
+        //    @include mq(xs) {
+        //      top: 18px;
+        //      left: 30px;
+        //    }
+        //  }
+        //}
+
         &__photo {
+
+          //@include mq(s) {
+          //  margin: -50px auto 0;
+          //}
+          //
+          //@include mq(xs) {
+          //  margin-top: 0;
+          //}
 
           figure {
 
@@ -440,6 +532,11 @@
               .ellipse {
                 top: 39px;
                 right: 79px;
+
+                @include mq(s) {
+                  top: calc(100% - 106px);
+                  left: -9px;
+                }
               }
             }
 
@@ -448,63 +545,16 @@
               .ellipse {
                 bottom: 17px;
                 right: 154px;
+
+                @include mq(s) {
+                  top: -14px;
+                  right: -14px;
+                }
               }
             }
           }
         }
       }
-
-      //.catalog__block-img {
-      //  top: -71px;
-      //
-      //  @include mq(md) {
-      //    top: 0;
-      //  }
-      //
-      //  >figure {
-      //    top: 136px;
-      //    left: -344px;
-      //
-      //    @include mq(xl) {
-      //      left: -324px;
-      //    }
-      //
-      //    @include mq(md) {
-      //      left: -35px;
-      //    }
-      //
-      //    img {
-      //      transform: rotate(-23.1deg);
-      //    }
-      //
-      //    .ellipse {
-      //      top: -47px;
-      //      left: 76px;
-      //    }
-      //  }
-      //
-      //  &__photo {
-      //
-      //    figure {
-      //
-      //      &:nth-child(1) {
-      //
-      //        .ellipse {
-      //          bottom: 17px;
-      //          right: 154px;
-      //        }
-      //      }
-      //
-      //      &:nth-child(2) {
-      //
-      //        .ellipse {
-      //          top: 39px;
-      //          right: 79px;
-      //        }
-      //      }
-      //    }
-      //  }
-      //}
     }
 
     &.blue {
@@ -527,16 +577,92 @@
         }
 
         >figure {
-          top: 62px;
-          right: -333px;
+
+          img {
+            top: 144px;
+            right: -288px;
+            transform: rotate(34.01deg);
+
+            @include mq(xl) {
+              right: -265px;
+            }
+
+            @include mq(md) {
+              left: -52px;
+              transform: rotate(-34.01deg) scale(-1, 1);
+            }
+
+            @include mq(xs) {
+              transform: rotate(-23deg) scale(-1, 1);
+            }
+          }
 
           .ellipse {
-            top: 4px;
-            left: -350px;
+            top: 86px;
+            left: -42px;
+
+            @include mq(md) {
+              left: 0;
+            }
           }
         }
 
+        //>figure {
+        //  top: 62px;
+        //  right: -333px;
+        //
+        //  @include mq(md) {
+        //    width: 468px;
+        //    transform: scale(-1, 1);
+        //    left: -95px;
+        //  }
+        //
+        //  @include mq(s) {
+        //    top: 0;
+        //    left: 50%;
+        //    transform: translateX(-50%) scale(-1, 1);
+        //  }
+        //
+        //  @include mq(xs) {
+        //    width: 100%;
+        //  }
+        //
+        //  img {
+        //
+        //    @include mq(xs) {
+        //      width: 127%;
+        //    }
+        //  }
+        //
+        //  .ellipse {
+        //    top: 4px;
+        //    left: -350px;
+        //
+        //    @include mq(md) {
+        //      left: 0;
+        //    }
+        //
+        //    @include mq(s) {
+        //      top: 18px;
+        //      left: 75px;
+        //    }
+        //
+        //    @include mq(xs) {
+        //      top: 18px;
+        //      left: 30px;
+        //    }
+        //  }
+        //}
+
         &__photo {
+
+          //@include mq(s) {
+          //  margin: -100px auto 0;
+          //}
+          //
+          //@include mq(xs) {
+          //  margin-top: 0;
+          //}
 
           figure {
 
@@ -553,6 +679,11 @@
 
                 @include mq(lg) {
                   right: 147px;
+                }
+
+                @include mq(s) {
+                  top: calc(100% - 106px);
+                  left: -9px;
                 }
               }
             }
@@ -571,117 +702,16 @@
                 @include mq(lg) {
                   right: 72px;
                 }
+
+                @include mq(s) {
+                  top: -14px;
+                  right: -14px;
+                }
               }
             }
           }
         }
       }
-
-      //.catalog__block-img {
-      //  top: -68px;
-      //  right: 190px;
-      //
-      //  @include mq(lg) {
-      //    right: 0;
-      //  }
-      //
-      //  @include mq(md) {
-      //    top: 0;
-      //  }
-      //
-      //  //@include mq(xl) {
-      //  //  right: -58px;
-      //  //}
-      //  //
-      //  //@include mq(lg) {
-      //  //  right: 0;
-      //  //}
-      //  //
-      //  //@include mq(md) {
-      //  //  top: 0;
-      //  //}
-      //
-      //  >figure {
-      //    order: 2;
-      //    top: 144px;
-      //    right: -288px;
-      //
-      //    @include mq(xl) {
-      //      right: -268px;
-      //    }
-      //
-      //    @include mq(md) {
-      //      width: 378px;
-      //      left: -50px;
-      //    }
-      //    //margin-top: 143px;
-      //    //margin-left: -89px;
-      //    //
-      //    //@include mq(md) {
-      //    //  margin-left: -100px;
-      //    //}
-      //
-      //    img {
-      //      transform: rotate(34.01deg);
-      //
-      //      @include mq(md) {
-      //        transform: rotate(-34.01deg) scale(-1, 1);
-      //      }
-      //    }
-      //
-      //    .ellipse {
-      //      top: -58px;
-      //      left: -395px;
-      //
-      //      @include mq(md) {
-      //        left: 76px;
-      //      }
-      //    }
-      //  }
-      //
-      //  &__photo {
-      //    order: 1;
-      //
-      //    figure {
-      //
-      //      &:nth-child(1) {
-      //        order: 2;
-      //
-      //        @include mq(lg) {
-      //          order: 1;
-      //        }
-      //
-      //        .ellipse {
-      //          bottom: 20px;
-      //          right: -72px;
-      //
-      //          @include mq(lg) {
-      //            bottom: 24px;
-      //            right: 154px;
-      //          }
-      //        }
-      //      }
-      //
-      //      &:nth-child(2) {
-      //        order: 1;
-      //
-      //        @include mq(lg) {
-      //          order: 2;
-      //        }
-      //
-      //        .ellipse {
-      //          top: 36px;
-      //          right: -147px;
-      //
-      //          @include mq(lg) {
-      //            top: 32px;
-      //            right: 79px;
-      //          }
-      //        }
-      //      }
-      //    }
-      //  }
-      //}
     }
 
     &.woman {
@@ -694,16 +724,69 @@
         }
 
         >figure {
-          top: 78px;
-          left: -333px;
+
+          img {
+            top: 151px;
+            left: -316px;
+            transform: rotate(-23deg);
+
+            @include mq(md) {
+              left: -30px;
+            }
+          }
 
           .ellipse {
-            top: 4px;
-            left: 65px;
+            top: 82px;
           }
         }
 
+        //>figure {
+        //  top: 78px;
+        //  left: -333px;
+        //
+        //  @include mq(md) {
+        //    left: -46px;
+        //  }
+        //
+        //  @include mq(s) {
+        //    max-width: 445px;
+        //    top: 0;
+        //    left: 50%;
+        //    transform: translateX(-50%);
+        //  }
+        //
+        //  img {
+        //
+        //    @include mq(xs) {
+        //      left: -11%;
+        //    }
+        //  }
+        //
+        //  .ellipse {
+        //    top: 4px;
+        //    left: 65px;
+        //
+        //    @include mq(s) {
+        //      top: 18px;
+        //      left: 75px;
+        //    }
+        //
+        //    @include mq(xs) {
+        //      top: 18px;
+        //      left: 30px;
+        //    }
+        //  }
+        //}
+
         &__photo {
+
+          //@include mq(s) {
+          //  margin: -50px auto 0;
+          //}
+          //
+          //@include mq(xs) {
+          //  margin-top: 0;
+          //}
 
           figure {
 
@@ -712,6 +795,11 @@
               .ellipse {
                 top: 32px;
                 right: 79px;
+
+                @include mq(s) {
+                  top: calc(100% - 106px);
+                  left: -9px;
+                }
               }
             }
 
@@ -720,64 +808,16 @@
               .ellipse {
                 bottom: 24px;
                 right: 154px;
+
+                @include mq(s) {
+                  top: -14px;
+                  right: -14px;
+                }
               }
             }
           }
         }
       }
-      //.catalog__block-img {
-      //  top: -64px;
-      //
-      //  @include mq(md) {
-      //    top: 0;
-      //  }
-      //
-      //  >figure {
-      //    top: 151px;
-      //    left: -315px;
-      //    //margin-top: 151px;
-      //    //margin-right: -95px;
-      //    //
-      //    //@include mq(md) {
-      //    //  margin-right: -133px;
-      //    //}
-      //
-      //    @include mq(md) {
-      //      left: -30px;
-      //    }
-      //
-      //    img {
-      //      transform: rotate(-23deg);
-      //    }
-      //
-      //    .ellipse {
-      //      top: -69px;
-      //      left: 48px;
-      //    }
-      //  }
-      //
-      //  &__photo {
-      //
-      //    figure {
-      //
-      //      &:nth-child(1) {
-      //
-      //        .ellipse {
-      //          bottom: 24px;
-      //          right: 154px;
-      //        }
-      //      }
-      //
-      //      &:nth-child(2) {
-      //
-      //        .ellipse {
-      //          top: 32px;
-      //          right: 79px;
-      //        }
-      //      }
-      //    }
-      //  }
-      //}
     }
   }
 

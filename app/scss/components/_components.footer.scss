@@ -84,14 +84,27 @@
         left: 0;
       }
 
+      @include mq(s) {
+        max-width: 669px;
+      }
+
       img {
         position: relative;
         z-index: 9;
+
+        @include mq(s) {
+          width: 100%;
+        }
       }
 
       h2 {
         top: 0;
         right: 44px;
+
+        @include mq(s) {
+          top: -53px;
+          right: 0;
+        }
       }
 
       .ellipse {
@@ -99,6 +112,16 @@
         height: 450px;
         top: -47px;
         left: -105px;
+
+        @include mq(s) {
+          top: -19px;
+          left: -43px;
+        }
+
+        @include mq(xs) {
+          width: 185px;
+          height: 185px;
+        }
       }
     }
 

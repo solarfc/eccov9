@@ -36,6 +36,10 @@
 
       img {
         margin: 30px auto;
+
+        @include mq(xs) {
+          width: 100%;
+        }
       }
 
       p {
@@ -128,6 +132,13 @@
       top: -144px;
       right: -301px;
       z-index: -1;
+
+      @include mq(s) {
+        width: 335px;
+        height: 245px;
+        top: -113px;
+        right: -134px;
+      }
     }
   }
 }
