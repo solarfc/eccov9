@@ -133,34 +133,6 @@
 
         }
 
-        //position: absolute;
-        //
-        //@include mq(lg) {
-        //  display: none;
-        //}
-        //
-        //@include mq(md) {
-        //  display: block;
-        //}
-        //
-        //@include mq(s) {
-        //  position: relative;
-        //}
-        //
-        //@include mq(xs) {
-        //  width: 100%;
-        //}
-        //
-        //img {
-        //
-        //  @include mq(xs) {
-        //    width: 116%;
-        //    min-width: 338px;
-        //    position: relative;
-        //    left: -16%;
-        //  }
-        //}
-
         img {
           margin: 0;
           position: absolute;
@@ -230,10 +202,6 @@
             img {
 
             }
-          }
-
-          .ellipse {
-
           }
 
           &:nth-child(1) {
@@ -484,46 +452,7 @@
           }
         }
 
-        //>figure {
-        //  top: 65px;
-        //  left: -372px;
-        //
-        //  @include mq(md) {
-        //    left: -63px;
-        //  }
-        //
-        //  @include mq(s) {
-        //    max-width: 466px;
-        //    top: 0;
-        //    left: 50%;
-        //    transform: translateX(-50%);
-        //  }
-        //
-        //  .ellipse {
-        //    top: 24px;
-        //    left: 104px;
-        //
-        //    @include mq(s) {
-        //      top: 18px;
-        //      left: 75px;
-        //    }
-        //
-        //    @include mq(xs) {
-        //      top: 18px;
-        //      left: 30px;
-        //    }
-        //  }
-        //}
-
         &__photo {
-
-          //@include mq(s) {
-          //  margin: -50px auto 0;
-          //}
-          //
-          //@include mq(xs) {
-          //  margin-top: 0;
-          //}
 
           figure {
 
@@ -607,62 +536,7 @@
           }
         }
 
-        //>figure {
-        //  top: 62px;
-        //  right: -333px;
-        //
-        //  @include mq(md) {
-        //    width: 468px;
-        //    transform: scale(-1, 1);
-        //    left: -95px;
-        //  }
-        //
-        //  @include mq(s) {
-        //    top: 0;
-        //    left: 50%;
-        //    transform: translateX(-50%) scale(-1, 1);
-        //  }
-        //
-        //  @include mq(xs) {
-        //    width: 100%;
-        //  }
-        //
-        //  img {
-        //
-        //    @include mq(xs) {
-        //      width: 127%;
-        //    }
-        //  }
-        //
-        //  .ellipse {
-        //    top: 4px;
-        //    left: -350px;
-        //
-        //    @include mq(md) {
-        //      left: 0;
-        //    }
-        //
-        //    @include mq(s) {
-        //      top: 18px;
-        //      left: 75px;
-        //    }
-        //
-        //    @include mq(xs) {
-        //      top: 18px;
-        //      left: 30px;
-        //    }
-        //  }
-        //}
-
         &__photo {
-
-          //@include mq(s) {
-          //  margin: -100px auto 0;
-          //}
-          //
-          //@include mq(xs) {
-          //  margin-top: 0;
-          //}
 
           figure {
 
@@ -740,53 +614,7 @@
           }
         }
 
-        //>figure {
-        //  top: 78px;
-        //  left: -333px;
-        //
-        //  @include mq(md) {
-        //    left: -46px;
-        //  }
-        //
-        //  @include mq(s) {
-        //    max-width: 445px;
-        //    top: 0;
-        //    left: 50%;
-        //    transform: translateX(-50%);
-        //  }
-        //
-        //  img {
-        //
-        //    @include mq(xs) {
-        //      left: -11%;
-        //    }
-        //  }
-        //
-        //  .ellipse {
-        //    top: 4px;
-        //    left: 65px;
-        //
-        //    @include mq(s) {
-        //      top: 18px;
-        //      left: 75px;
-        //    }
-        //
-        //    @include mq(xs) {
-        //      top: 18px;
-        //      left: 30px;
-        //    }
-        //  }
-        //}
-
         &__photo {
-
-          //@include mq(s) {
-          //  margin: -50px auto 0;
-          //}
-          //
-          //@include mq(xs) {
-          //  margin-top: 0;
-          //}
 
           figure {
 

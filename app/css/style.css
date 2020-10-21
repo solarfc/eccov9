@@ -702,7 +702,7 @@ form .form-group.order button {
 }
 
 .gallery__content a:hover img, .photo__content a:hover img, .catalog__block-img__photo figure a:hover img {
-  opacity: .55;
+  opacity: .85;
 }
 
 .gallery__content a:hover:after, .photo__content a:hover:after, .catalog__block-img__photo figure a:hover:after {
